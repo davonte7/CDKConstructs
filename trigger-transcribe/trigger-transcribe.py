@@ -39,7 +39,7 @@ class TriggerTranscribe(Construct):
         # Trigger Transcription Trigger
         trigger_transcription_trigger = lambda_.Function(self, 'video-upload-trigger', **python_lambda_kwargs,
                                                          code=lambda_.Code.from_asset(
-                                                             './app_cdk/assets/lambdas/file-uploaded-trigger'),
+                                                             './assets/lambdas/file-uploaded-trigger'),
                                                          function_name="start-transcription",
                                                          initial_policy=[
                                                              iam.PolicyStatement(
