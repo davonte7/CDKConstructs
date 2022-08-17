@@ -36,7 +36,7 @@ class TriggerTranscribe(Construct):
             'timeout': Duration.minutes(2)
         }
 
-        # Trigger Transcription Trigger
+        # Trigger Transcription Lambda
         trigger_transcription_trigger = lambda_.Function(self, 'video-upload-trigger', **python_lambda_kwargs,
                                                          code=lambda_.Code.from_asset(
                                                              './assets/lambdas/file-uploaded-trigger'),
